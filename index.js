@@ -7,11 +7,11 @@ class SftpUploadClient {
   constructor() {
     this.sftp = new Client();
     this.ssh = new SSHClient();
-    this.config = {};
+    this.configData = {};
   }
 
   config(config) {
-    this.config = config;
+    this.configData = config;
   }
 
   async backupAndClearRemoteDir(remoteDir) {
@@ -63,14 +63,14 @@ class SftpUploadClient {
   async upload(localDir, remoteDir) {
     try {
       await new Promise((resolve, reject) => {
-        this.ssh.on('ready', resolve).on('error', reject).connect(this.config);
+        this.ssh.on('ready', resolve).on('error', reject).connect(this.configData);
       });
       console.log('SSH connected to the server');
 
       await this.backupAndClearRemoteDir(remoteDir);
       console.log('Backup and clear remote directory completed');
 
-      await this.sftp.connect(this.config);
+      await this.sftp.connect(this.configData);
       console.log('SFTP connected to the server');
 
       await this.uploadDir(localDir, remoteDir);

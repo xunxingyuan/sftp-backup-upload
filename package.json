@@ -1,6 +1,6 @@
 {
   "name": "sftp-backup-upload",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Upload a local folder to the server through sftp, and back up the corresponding folder on the server before uploading.",
   "main": "index.js",
   "bin": {
