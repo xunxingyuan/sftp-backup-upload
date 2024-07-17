@@ -1,8 +1,9 @@
 {
   "name": "sftp-backup-upload",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Upload a local folder to the server through sftp, and back up the corresponding folder on the server before uploading.",
   "main": "index.js",
+  "repository": "https://github.com/xunxingyuan/sftp-backup-upload",
   "bin": {
     "sftp-upload": "./cli.js"
   },
