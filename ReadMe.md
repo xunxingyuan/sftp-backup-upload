@@ -50,13 +50,13 @@ const SftpUploadClient = require('sftp-backup-upload');
 const client = new SftpUploadClient();
 
 client.config({
-  host: '192.168.100.235',
+  host: '127.0.0.1',
   port: 22,
   username: 'root',
-  password: 'giant@123'
+  password: 'root'
 });
 
-client.upload('./dist', '/home/giantan/web/html_test/home')
+client.upload('./dist', '/home/dist')
   .then(() => {
     console.log('Upload completed successfully');
   })
