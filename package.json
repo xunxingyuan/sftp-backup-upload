@@ -1,0 +1,20 @@
+{
+  "name": "sftp-backup-upload",
+  "version": "0.0.2",
+  "description": "Upload a local folder to the server through sftp, and back up the corresponding folder on the server before uploading.",
+  "main": "index.js",
+  "bin": {
+    "sftp-upload": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["sftp", "upload", "backup"],
+  "author": "xunxingyuan@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "ssh2": "^1.15.0",
+    "ssh2-sftp-client": "^10.0.3",
+    "yargs": "^17.3.1"
+  }
+}
